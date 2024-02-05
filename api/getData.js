@@ -1,9 +1,11 @@
 
+const utils = require('../modules/utils'); // The path
+
 module.exports = (req, res) => {
     const { name } = req.query;
     if (name) {
-        const date = new Date();
-        res.status(200).send(`Hello ${name}, What a beautiful day. Server current date and time is ${date}`);
+        const responseMessage = utils.getDate(name);
+        res.status(200).send(`<p style="color: blue;">${responseMessage}</p>`);
     } else {
         res.status(400).send('Name is required');
     }
