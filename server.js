@@ -2,7 +2,7 @@
 const http = require('http'); // HTTP module to create an HTTP server
 const url = require('url'); // URL module to parse URL strings
 // const fs = require('fs'); // File System module to interact with the file system
-// const path = require('path'); // Path module to work with file and directory paths
+const path = require('path'); // Path module to work with file and directory paths
 const PORT = process.env.PORT || 8800; // Use the environment's port or default to 8800
 
 // Correct the paths based on your current directory structure
